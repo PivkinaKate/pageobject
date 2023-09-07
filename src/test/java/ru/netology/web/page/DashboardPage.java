@@ -2,9 +2,7 @@ package ru.netology.web.page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import ru.netology.web.data.DataHelper;
 
-import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -34,7 +32,6 @@ public class DashboardPage {
 // public TransferPage selectCardToTransfer(DataHelper.CardInfo cardInfo) {
  //   cards.findBy(attribute("data-test-id", cardInfo.getTestId())).$("button").click();
   //  return
- }
 
 
 
@@ -52,3 +49,4 @@ public class DashboardPage {
     return Integer.parseInt(value);
   }
 
+}
