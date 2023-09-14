@@ -11,23 +11,24 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class DashboardPage {
 
-  private String balanceStart = "баланс: ";
+
   private SelenideElement heading = $("[data-test-id=dashboard]");
-  private String balanceFinish = "р.";
+  private final String balanceStart = "баланс: ";
+  private final String balanceFinish = " р.";
   private ElementsCollection cards = $$(".list__item div");
 
   public DashboardPage() {
     heading.shouldBe(visible);
   }
 
- // public int getCardBalance(DataHelper.CardInfo cardInfo) {
-  // var text = cards.findBy(text(cardInfo.getCardNumber().substring(15))).getText();
+  // public int getCardBalance(DataHelper.CardInfo cardInfo) {
+  //var text = cards.findBy(text(cardInfo.getCardNumber().substring(15))).getText();
   // return extractBalance(text);
+ //} тут
 
 
-
-  public int getCardBalance(int index) {
-   var text = cards.get(index).getText();
+  public int getCardBalance(int CardInfo) {
+   var text = cards.get(CardInfo).getText();
    return extractBalance(text);
   }
 
@@ -38,7 +39,7 @@ public class DashboardPage {
 
 
 
-  //private int extractBalance(String text) {
+  // private int extractBalance(String text) {
    // var start = text.indexOf(balanceStart);
   //  var finish = text.indexOf(balanceFinish);
     //var value = text.substring(start + balanceStart.length(), finish);
